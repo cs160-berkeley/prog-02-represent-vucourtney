@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.courtneyvu.electme.HomeScreen"
+    tools:showIn="@layout/activity_home_screen">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:background="@color/navy"/>
+
+    <TextView
+        android:id="@+id/intro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/intro1"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/intro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/intro2"
+        android:textSize="24sp"/>
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/intro2"
+        android:layout_marginTop="10dp"
+        android:id="@+id/flag"
+        android:src="@drawable/flag"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flag"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/zip_instr"
+        android:layout_marginTop="10dp"
+        android:text="@string/enter_zip"
+        android:textSize="24sp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zip_instr"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/zip">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zip_entry"
+            android:hint="@string/zip_hint"
+            android:textSize="20sp"
+            android:inputType="number"/>
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:id="@+id/zip_button"
+            android:text="@string/button_go"
+            android:background="@color/gold"
+            android:onClick="findReps"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/or"
+        android:text="@string/or"
+        android:textSize="24sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/or"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:id="@+id/loc_button"
+        android:text="@string/select_loc"
+        android:background="@color/gold"
+        android:onClick="findReps"/>
+
+</RelativeLayout>

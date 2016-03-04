@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.courtneyvu.electme.DetailRep"
+    tools:showIn="@layout/activity_detail_rep">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:background="@color/navy"/>
+
+    <ImageView
+        android:layout_width="@dimen/headshot_size_lg"
+        android:layout_height="@dimen/headshot_size_lg"
+        android:layout_below="@id/header"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:layout_marginTop="@dimen/detail_vertical_margin"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/rep_photo"
+        android:src="@drawable/man2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/rep_photo"
+        android:layout_below="@id/header"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/detail_horizontal_margin"
+        android:id="@+id/rep_name"
+        android:hint="Congressman name"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rep_name"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:id="@+id/term_end_info"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/term_ends"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/term_ends_entry"
+            android:hint="Jan 1, 2000"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/term_end_info"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:layout_marginEnd="@dimen/detail_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:id="@+id/comm_title"
+        android:text="@string/committees_title"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/comm_title"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:layout_marginEnd="@dimen/detail_horizontal_margin"
+        android:layout_marginTop="3dp"
+        android:padding="10dp"
+        android:id="@+id/committees_view"
+        android:background="@drawable/border_no_fill">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comm_list"
+            android:textSize="20sp"/>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/committees_view"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:layout_marginEnd="@dimen/detail_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bills_title"
+        android:text="@string/bills_title"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/bills_title"
+        android:layout_marginStart="@dimen/detail_horizontal_margin"
+        android:layout_marginEnd="@dimen/detail_horizontal_margin"
+        android:layout_marginTop="3dp"
+        android:padding="10dp"
+        android:id="@+id/bills_view"
+        android:background="@drawable/border_no_fill">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bills_list"
+            android:textSize="20sp"/>
+
+    </ScrollView>
+
+
+</RelativeLayout>
