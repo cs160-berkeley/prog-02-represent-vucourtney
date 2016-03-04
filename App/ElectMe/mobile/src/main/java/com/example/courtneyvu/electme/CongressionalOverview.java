@@ -29,17 +29,9 @@ public class CongressionalOverview extends AppCompatActivity {
                 TextView name2 = (TextView) findViewById(R.id.name2);
                 TextView name3 = (TextView) findViewById(R.id.name3);
 
-                ImageButton pic1 = (ImageButton) findViewById(R.id.pic1);
-                ImageButton pic2 = (ImageButton) findViewById(R.id.pic2);
-                ImageButton pic3 = (ImageButton) findViewById(R.id.pic3);
-
                 name1.setText(intent.getStringExtra("REP0_NAME"));
-                name1.setText(intent.getStringExtra("REP1_NAME"));
-                name1.setText(intent.getStringExtra("REP2_NAME"));
-
-                pic1.setImageResource(Integer.parseInt(intent.getStringExtra("PHOTO0")));
-                pic2.setImageResource(Integer.parseInt(intent.getStringExtra("PHOTO1")));
-                pic3.setImageResource(Integer.parseInt(intent.getStringExtra("PHOTO2")));
+                name2.setText(intent.getStringExtra("REP1_NAME"));
+                name3.setText(intent.getStringExtra("REP2_NAME"));
             }
         }
 

@@ -24,12 +24,6 @@ public class DetailRep extends AppCompatActivity {
             String name = intent.getStringExtra("REP_NAME");
             TextView textView = (TextView) findViewById(R.id.rep_name);
             textView.setText(name);
-
-            if (extras.keySet().size() > 1) {
-                String photo = intent.getStringExtra("REP_PHOTO");
-                ImageView imageView = (ImageView) findViewById(R.id.rep_photo);
-                imageView.setImageResource(Integer.parseInt(photo));
-            }
         }
 
     }

@@ -10,6 +10,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.wearable.view.DotsPageIndicator;
 import android.support.wearable.view.GridViewPager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
@@ -101,14 +102,13 @@ public class MainActivity extends Activity {
 
         if (extras != null && extras.keySet().size() > 1) {
             Intent sendIntent = new Intent(getBaseContext(), WatchToPhoneShakeService.class);
+            Log.d("test", "makes service");
             String concatNames = "";
-            String concatPhotos = "";
             for (int i = 0; i < 3; i++) {
                 concatNames += repNames[i] + ";";
-                concatPhotos += repPhotos.toString() + ";";
             }
             sendIntent.putExtra("NAMES", concatNames);
-            sendIntent.putExtra("PHOTOS", concatPhotos);
+            Log.d("test", "starts service");
             startService(sendIntent);
         }
 

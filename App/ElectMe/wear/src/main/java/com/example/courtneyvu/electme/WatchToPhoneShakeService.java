@@ -55,7 +55,7 @@ public class WatchToPhoneShakeService extends Service implements GoogleApiClient
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
         final String rep_names = extras.getString("NAMES");
-        final String rep_photos = extras.getString("PHOTOS");
+        Log.d("test", "sent msg");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -64,7 +64,7 @@ public class WatchToPhoneShakeService extends Service implements GoogleApiClient
                 //first, connect to the apiclient
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/" + rep_names + rep_photos, rep_names + rep_photos);
+                sendMessage("/" + rep_names, rep_names);
             }
         }).start();
 

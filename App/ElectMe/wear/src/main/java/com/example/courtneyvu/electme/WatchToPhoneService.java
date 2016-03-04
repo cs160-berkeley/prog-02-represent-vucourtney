@@ -55,7 +55,6 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
         final String rep_name = extras.getString("NAME");
-        final Integer rep_img = extras.getInt("PHOTO");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -65,7 +64,7 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
                 Log.d("test", "sends msg");
-                sendMessage("/" + rep_name, rep_name + ";" + rep_img.toString());
+                sendMessage("/" + rep_name, rep_name);
             }
         }).start();
 

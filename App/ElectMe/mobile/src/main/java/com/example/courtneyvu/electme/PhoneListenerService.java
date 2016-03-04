@@ -33,23 +33,19 @@ public class PhoneListenerService extends WearableListenerService {
         String[] vals = value.split(";");
         Log.d("values passed: ", ((Integer) vals.length).toString());
 
-        if (vals.length == 2) {
+        if (vals.length == 1) {
             Intent intent = new Intent(this, DetailRep.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("REP_NAME", vals[0]);
-            intent.putExtra("REP_PHOTO", vals[1]);
 
             Log.d("T", "about to start phone DetailView");
             startActivity(intent);
-        } else if (vals.length > 2) {
+        } else if (vals.length > 1) {
             Intent intent = new Intent(this, CongressionalOverview.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("REP0_NAME", vals[0]);
             intent.putExtra("REP1_NAME", vals[1]);
             intent.putExtra("REP2_NAME", vals[2]);
-            intent.putExtra("PHOTO0", vals[3]);
-            intent.putExtra("PHOTO1", vals[4]);
-            intent.putExtra("PHOTO2", vals[5]);
 
             Log.d("T", "about to start phone CongressionalOverview");
             startActivity(intent);

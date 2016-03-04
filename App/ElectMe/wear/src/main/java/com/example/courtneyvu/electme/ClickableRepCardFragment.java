@@ -28,8 +28,7 @@ public class ClickableRepCardFragment extends CardFragment {
         Bundle savedInfo = getArguments();
 
         ImageView img = (ImageView) fragmentView.findViewById(R.id.rep_photo);
-        final Integer imgSrc = savedInfo.getInt("photo");
-        img.setImageResource(imgSrc);
+        img.setImageResource(savedInfo.getInt("photo"));
 
         TextView name = (TextView) fragmentView.findViewById(R.id.rep_name);
         name.setText(savedInfo.getCharSequence("name"));
@@ -44,7 +43,6 @@ public class ClickableRepCardFragment extends CardFragment {
                 if (!text.equals("Those are your Congressional representatives!")) {
                     Intent sendIntent = new Intent(getActivity().getBaseContext(), WatchToPhoneService.class);
                     sendIntent.putExtra("NAME", text);
-                    sendIntent.putExtra("PHOTO", imgSrc);
                     Log.d("test", "starts service");
                     getActivity().startService(sendIntent);
                 }
