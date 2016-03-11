@@ -4,17 +4,20 @@ Briefly describe your app here.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Courtney Vu ([vucourtney@berkeley.edu](mailto:vucourtney@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See Demo Video: (https://link_to_your_video)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/phonemain.png" height="400" alt="Screenshot"/>
+<img src="screenshots/watchmain.png" height="200" alt="Screenshot"/>
+<img src="screenshots/phonecongressional.png" height="400" alt="Screenshot"/>
+<img src="screenshots/phonedetail.png" height="400" alt="Screenshot"/>
+<img src="screenshots/watchvote.png" height="200" alt="Screenshot"/>
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
+CS160 Spring 2016 Staff - Sample Code for Phone-Watch Communication

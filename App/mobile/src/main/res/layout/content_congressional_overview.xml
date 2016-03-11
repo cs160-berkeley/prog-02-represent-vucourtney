@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="6dp"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.courtneyvu.electme.CongressionalOverview"
+    tools:showIn="@layout/activity_congressional_overview">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:background="@color/navy"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/instruction"
+        android:text="@string/click_instr"
+        android:textSize="23sp"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:padding="8dp"
+                android:id="@+id/rep1">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic1"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen1"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic1"
+                    android:layout_marginStart="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name1"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep1"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic1"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email1"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email1"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website1"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:padding="8dp"
+                android:id="@+id/rep2">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic2"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen2"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/pic2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name2"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep2"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic2"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email2"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email2"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website2"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:padding="8dp"
+                android:id="@+id/rep3">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic3"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen3"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name3"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep3"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic3"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email3"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email3"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website3"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:visibility="invisible"
+                android:padding="8dp"
+                android:id="@+id/rep4">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic4"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen4"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name4"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep4"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic4"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email4"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email4"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website4"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:visibility="invisible"
+                android:padding="8dp"
+                android:id="@+id/rep5">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic5"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen4"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name5"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep4"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic5"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email5"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:visibility="invisible"
+                android:padding="8dp"
+                android:id="@+id/rep6">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic6"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen4"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name6"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep4"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic6"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email6"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email6"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website6"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/overview_margin"
+                android:layout_marginEnd="@dimen/overview_margin"
+                android:visibility="invisible"
+                android:padding="8dp"
+                android:id="@+id/rep7">
+
+                <ImageButton
+                    android:layout_width="@dimen/headshot_size"
+                    android:layout_height="@dimen/headshot_size"
+                    android:padding="0dp"
+                    android:id="@+id/pic7"
+                    android:scaleType="fitCenter"
+                    android:onClick="getDetailedScreen4"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pic7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name7"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/name_size"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tweet_button_size"
+                        android:layout_below="@id/name7"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/border_no_fill">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_tweet"
+                            android:textSize="@dimen/button_text_size"
+                            android:background="@color/white"
+                            android:onClick="getTweetRep4"/>
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/twitter_logo" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/pic7"
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/email7"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="email"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/contact_button_height"
+                    android:layout_below="@id/email7"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/website7"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/blue"
+                    android:autoLink="web"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
