@@ -8,7 +8,7 @@ Courtney Vu ([vucourtney@berkeley.edu](mailto:vucourtney@berkeley.edu))
 
 ## Demo Video
 
-See Demo Video: (https://link_to_your_video)
+See Demo Video: (https://youtu.be/f0LRX_Dp8iQ)
 
 ## Screenshots
 
